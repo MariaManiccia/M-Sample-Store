@@ -1,0 +1,48 @@
+{% style %}
+
+  .announcement-bar__main p, .announcement-bar__main a {
+    color:{{ section.settings['text-color'] }};
+  }
+  
+{% endstyle %}
+
+<div class="announcement-bar" style="background-color:{{ section.settings['bg-color'] }}">
+  <div class="announcement-bar__main">
+      {{ section.settings['text'] }}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "M - Announcement Bar",
+  "enabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Announcement"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Announcement Text"
+    },
+    {
+      "type": "color",
+      "id": "text-color",
+      "label": "Text Color"
+    },
+    {
+      "type": "color",
+      "id": "bg-color",
+      "label": "Background Color"
+    },
+  ],
+  "presets": [
+    {
+      "name": "M - Announcement Bar"
+    }
+  ]
+}
+{% endschema %}

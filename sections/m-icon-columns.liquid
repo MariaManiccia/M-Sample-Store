@@ -1,0 +1,97 @@
+<div class="icon-columns">
+  <div class="icon-columns__main">
+    <div class="icon-columns__ind">
+      <img
+        src="
+          {{
+            section.settings.image-one
+            | image_url
+          }}
+        "
+        alt="Icon"
+      >
+      <p>{{ section.settings['text-one'] }}</p>
+    </div>
+
+    <div class="icon-columns__ind">
+      <img
+        src="
+          {{
+            section.settings.image-two
+            | image_url
+          }}
+        "
+        alt="Icon"
+      >
+      <p>{{ section.settings['text-two'] }}</p>
+    </div>
+
+    <div class="icon-columns__ind">
+      <img
+        src="
+          {{
+            section.settings.image-three
+            | image_url
+          }}
+        "
+        alt="Icon"
+      >
+      <p>{{ section.settings['text-three'] }}</p>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "M - Icon Columns",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Column One"
+    },
+    {
+      "type": "image_picker",
+      "id": "image-one",
+      "label": "Column One Icon"
+    },
+    {
+      "type": "text",
+      "id": "text-one",
+      "label": "Column One Text"
+    },
+    {
+      "type": "header",
+      "content": "Column Two"
+    },
+    {
+      "type": "image_picker",
+      "id": "image-two",
+      "label": "Column Two Icon"
+    },
+    {
+      "type": "text",
+      "id": "text-two",
+      "label": "Column Two Text"
+    },
+    {
+      "type": "header",
+      "content": "Column Three"
+    },
+    {
+      "type": "image_picker",
+      "id": "image-three",
+      "label": "Column Three Icon"
+    },
+    {
+      "type": "text",
+      "id": "text-three",
+      "label": "Column Three Text"
+    },
+  ],
+  "presets": [
+    {
+      "name": "M - Icon Columns"
+    }
+  ]
+}
+{% endschema %}

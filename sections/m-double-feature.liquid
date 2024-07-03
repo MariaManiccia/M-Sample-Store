@@ -1,0 +1,98 @@
+<div class="dbl-feature container">
+  <div class="dbl-feature__main">
+    <div class="dbl-feature__ind">
+      <img
+        src="
+          {{
+            section.settings.image-one
+            | image_url
+          }}
+        "
+        alt="Lifestyle Image"
+      >
+      <div>
+        {{ section.settings['heading-one'] }}
+        <p class="dbl-feature__p">{{ section.settings['text-one'] }}</p>
+        {{ section.settings['richtext-one'] }}
+      </div>
+    </div>
+
+    <div class="dbl-feature__ind">
+      <img
+        src="
+          {{
+            section.settings.image-two
+            | image_url
+          }}
+        "
+        alt="Lifestyle Image"
+      >
+      <div>
+        {{ section.settings['heading-two'] }}
+        <p class="dbl-feature__p">{{ section.settings['text-two'] }}</p>
+        {{ section.settings['richtext-two'] }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "M - Double Feature",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Column One"
+    },
+    {
+      "type": "image_picker",
+      "id": "image-one",
+      "label": "Column One Background Image"
+    },
+    {
+      "type": "richtext",
+      "id": "heading-one",
+      "label": "Column One Heading"
+    },
+    {
+      "type": "text",
+      "id": "text-one",
+      "label": "Column One Text"
+    },
+    {
+      "type": "richtext",
+      "id": "richtext-one",
+      "label": "Column One Links"
+    },
+    {
+      "type": "header",
+      "content": "Column Two"
+    },
+    {
+      "type": "image_picker",
+      "id": "image-two",
+      "label": "Column Two Background Image"
+    },
+    {
+      "type": "richtext",
+      "id": "heading-two",
+      "label": "Column Two Heading"
+    },
+    {
+      "type": "text",
+      "id": "text-two",
+      "label": "Column Two Text"
+    },
+    {
+      "type": "richtext",
+      "id": "richtext-two",
+      "label": "Column Two Links"
+    }
+  ],
+  "presets": [
+    {
+      "name": "M - Double Feature"
+    }
+  ]
+}
+{% endschema %}
